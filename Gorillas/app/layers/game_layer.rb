@@ -30,8 +30,7 @@ class GameLayer < Joybox::Core::Layer
     init_controls
   end
 
-
-  def init_controls
+    def init_controls
 
     on_touches_began do |touches, event|
 
@@ -72,11 +71,11 @@ class GameLayer < Joybox::Core::Layer
 
     @world.when_collide banana_body do |collision_body, is_touching|
 
-      #@banana_sprite.file_name = 'banana_hit.png'
-      #@enemy_gorilla.file_name = 'gorilla_hit.png'
+      @banana_sprite.file_name = 'banana_hit.png'
+      @enemy_gorilla.file_name = 'gorilla_hit.png'
     end
 
     @banana_sprite
   end
-
+  
 end

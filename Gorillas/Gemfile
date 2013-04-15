@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'joybox', '0.0.4'
+gem 'joybox', '0.0.5'
