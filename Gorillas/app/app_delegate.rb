@@ -1,8 +1,7 @@
 class AppDelegate
 
-  def application(application, didFinishLaunchingWithOptions:launchOptions)
-
-    @director = Joybox::Configuration.setup 
+  def application(application, didFinishLaunchingWithOptions: launchOptions)
+    @director = Joybox::Configuration.setup
 
     @navigation_controller = UINavigationController.alloc.initWithRootViewController(@director)
     @navigation_controller.navigationBarHidden = true
@@ -15,5 +14,4 @@ class AppDelegate
 
     true
   end
-  
 end
