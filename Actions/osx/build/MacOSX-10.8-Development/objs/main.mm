@@ -15,7 +15,7 @@ main(int argc, char **argv)
 #endif
         RubyMotionInit(argc, argv);
         rb_define_global_const("RUBYMOTION_ENV", @"development");
-rb_define_global_const("RUBYMOTION_VERSION", @"1.36");
+rb_define_global_const("RUBYMOTION_VERSION", @"2.0");
 
         NSApplication *app = [NSApplication sharedApplication];
         [app setDelegate:[NSClassFromString(@"AppDelegate") new]];
