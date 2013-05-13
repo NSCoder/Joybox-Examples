@@ -70,3 +70,17 @@ Amazing tutorial about Sprite Sheets, Sprite Batch and Animations
 * Touches
 * Animation & Animation Action
 * Macros 
+
+
+# REPL
+
+**Art By:** Daniel Cook [Danc's Miraculously Flexible Game Prototyping Tiles - Lost Garden](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
+
+**Authors:** Joybox Swarm
+
+REPL Support Example
+
+*Includes:*
+
+* Scene & Sprites
+* REPL Support
