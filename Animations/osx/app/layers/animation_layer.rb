@@ -28,7 +28,7 @@ class AnimationLayer < Joybox::Core::Layer
       click_location = event.location
       bear_velocity = Screen.width / 3.0
       move_difference = jbpSub(click_location, @bear_sprite.position)
-      distance_to_move = jbpLenght(move_difference)
+      distance_to_move = jbpLength(move_difference)
       move_duration = distance_to_move / bear_velocity
 
       @bear_sprite.flip x:false, y:false if move_difference.x < 0
