@@ -5,21 +5,16 @@ class ActionsLayer < Joybox::Core::Layer
     layout_menu
   end
 
-
   def layout_characters
-    @first_character = Sprite.new file_name: 'sprites/character_horn_girl.png',
-    position: [773, 375]
+    @first_character = Sprite.new file_name: 'sprites/character_horn_girl.png', position: [773, 375]
     self << @first_character
 
-    @second_character = Sprite.new file_name: 'sprites/character_pink_girl.png',
-    position: [870, 630]
+    @second_character = Sprite.new file_name: 'sprites/character_pink_girl.png', position: [870, 630]
     self << @second_character
 
-    @third_character = Sprite.new file_name: 'sprites/character_boy.png',
-    position: [975, 200]
+    @third_character = Sprite.new file_name: 'sprites/character_boy.png', position: [975, 200]
     self << @third_character
   end
-
 
   def layout_menu
     MenuLabel.default_font_size = 60
@@ -27,77 +22,56 @@ class ActionsLayer < Joybox::Core::Layer
 
     menu_items = Array.new
 
-    bezier_label = MenuLabel.new text: 'Bezier', color: Color.from_hex('172042'), do |menu_item|
+    bezier_label = MenuLabel.new text: 'Bezier', color: '#172042'.to_color, do |menu_item|
       apply_bezier_action
     end
-
     menu_items << bezier_label
 
-
-    blink_label = MenuLabel.new  text: 'Blink', color: Color.from_hex('172042'), do |menu_item|
+    blink_label = MenuLabel.new  text: 'Blink', color: '#172042'.to_color, do |menu_item|
       apply_blink_action
     end
-
     menu_items << blink_label
 
-
-    fade_label = MenuLabel.new text: 'Fade', color: Color.from_hex('172042'), do |menu_item|
+    fade_label = MenuLabel.new text: 'Fade', color: '#172042'.to_color, do |menu_item|
       apply_fade_action
     end
-
     menu_items << fade_label
 
-
-    jump_label = MenuLabel.new text: 'Jump', color: Color.from_hex('172042'), do |menu_item|
+    jump_label = MenuLabel.new text: 'Jump', color: '#172042'.to_color, do |menu_item|
       apply_jump_action
     end
-
     menu_items << jump_label
 
-
-    move_label = MenuLabel.new text: 'Move', color: Color.from_hex('172042'), do |menu_item|
+    move_label = MenuLabel.new text: 'Move', color: '#172042'.to_color, do |menu_item|
       apply_move_action                           
     end
-
     menu_items << move_label
 
-
-    rotate_label = MenuLabel.new text: 'Rotate', color: Color.from_hex('172042'), do |menu_item|
+    rotate_label = MenuLabel.new text: 'Rotate', color: '#172042'.to_color, do |menu_item|
       apply_rotate_action                         
     end
-
     menu_items << rotate_label
 
-
-    scale_label = MenuLabel.new text: 'Scale', color: Color.from_hex('172042'), do |menu_item|
+    scale_label = MenuLabel.new text: 'Scale', color: '#172042'.to_color, do |menu_item|
       apply_scale_action                      
     end
-
     menu_items << scale_label
 
-
-    skew_label = MenuLabel.new text: 'Skew', color: Color.from_hex('172042'), do |menu_item|
+    skew_label = MenuLabel.new text: 'Skew', color: '#172042'.to_color, do |menu_item|
       apply_skew_action
-
     end
     menu_items << skew_label
 
-
-    tint_label = MenuLabel.new text: 'Tint', color: Color.from_hex('172042'), do |menu_item|
+    tint_label = MenuLabel.new text: 'Tint', color: '#172042'.to_color, do |menu_item|
       apply_tint_action                 
     end
-
     menu_items << tint_label
 
-
-    menu = Menu.new items: menu_items,
-    position: [150, Screen.half_height]
+    menu = Menu.new items: menu_items, position: [150, Screen.half_height]
 
     menu.align_items_vertically
-
     self.add_child(menu, z: 1)
   end
-
 
   def apply_bezier_action
     first_bezier = Bezier.by bezier: [[10, 10], [10, 10], [10, 10]]
@@ -112,14 +86,12 @@ class ActionsLayer < Joybox::Core::Layer
 
     @second_character.run_action(Repeat.forever action:second_bezier_sequence)
 
-
     third_bezier = Bezier.by bezier: [[-10, 10], [-10, 10], [-10, 10]]
     third_bezier_reverse = third_bezier.reverse
     third_bezier_sequence = Sequence.with actions: [third_bezier, third_bezier_reverse]
 
     @third_character.run_action(Repeat.forever action:third_bezier_sequence)
   end
-
 
   def apply_blink_action
     first_blink = Blink.with times:5
@@ -146,14 +118,12 @@ class ActionsLayer < Joybox::Core::Layer
 
     @second_character.run_action(Repeat.forever action:second_fade_sequence)
 
-
     third_fade = Fade.to opacity: 127
     third_fade_reverse = Fade.to duration:0.3, opacity: 255
     third_fade_sequence = Sequence.with actions: [third_fade, third_fade_reverse]
 
     @third_character.run_action(Repeat.forever action:third_fade_sequence)
   end
-
 
   def apply_jump_action
     first_jump = Jump.by position: [30, 30], height: 20
@@ -168,14 +138,12 @@ class ActionsLayer < Joybox::Core::Layer
 
     @second_character.run_action(Repeat.forever action:second_jump_sequence)
 
-
     third_jump = Jump.by position: [-30, -30], height: 10, jumps:2
     third_jump_reverse = third_jump.reverse
     third_jump_sequence = Sequence.with actions: [third_jump, third_jump_reverse]
 
     @third_character.run_action(Repeat.forever action:third_jump_sequence)
   end
-
 
   def apply_move_action
     first_move = Move.by position: [30, 30]
@@ -266,13 +234,13 @@ class ActionsLayer < Joybox::Core::Layer
 
   # Important: Tint does not respond to 'reverse' method
   def apply_tint_action
-    first_tint = Tint.by color: Color.from_hex('5269d6')
+    first_tint = Tint.by color: '#5269d6'.to_color
     @first_character.run_action(first_tint)
 
-    second_tint = Tint.by color: Color.from_hex('e92672')
+    second_tint = Tint.by color: '#e92672'.to_color
     @second_character.run_action(second_tint)
 
-    third_tint = Tint.to color: Color.from_hex('f7c752')
+    third_tint = Tint.to color: '#f7c752'.to_color
     @third_character.run_action(third_tint)   
   end
     

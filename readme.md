@@ -72,7 +72,7 @@ Amazing tutorial about Sprite Sheets, Sprite Batch and Animations
 * Macros 
 
 
-# REPL
+## REPL
 
 **Art By:** Daniel Cook [Danc's Miraculously Flexible Game Prototyping Tiles - Lost Garden](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
 
@@ -84,3 +84,43 @@ REPL Support Example
 
 * Scene & Sprites
 * REPL Support
+
+## Flighter
+**Art  by:** Daniel Cook [Danc's Miraculously Flexible Game Prototyping Tiles - Lost Garden](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
+
+**Author:** Gaël Gillard [Swatto](https://github.com/Swatto)
+
+*Repository:* [Flighter](https://github.com/Swatto/Flighter)
+
+*Includes:*
+
+* Layers
+* Physics Sprites
+* Touches
+* World, Body, Polygon Fixture & Apply Force
+
+## Memory
+**Art  by:** Daniel Cook [Danc's Miraculously Flexible Game Prototyping Tiles - Lost Garden](http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html)
+
+**Authors:** Kyle Shipley [Shipstar](https://github.com/shipstar)
+
+**Tutorial:** [Memory: A Joybox Tutorial](http://blog.kyleshipley.com/post/56018019787/memory-a-joybox-tutorial)
+
+*Includes:*
+
+* Layers
+* Sprite, Sprite Batch, Sprite Frame Cache
+* Actions
+
+## Tweejump
+**Art by:** Copyright by Sergey Tikhonov, Please use them only for learning purposes, and don't release with your own project. [Haqu](http://haqu.net)
+
+**Author:** Sergey Tikhonov [Haqu](https://github.com/haqu)
+
+**Ported From:** [Cocos2D Example](https://github.com/haqu/tweejump)
+
+**Ported By:** Evgeny Gorbachev [ZpiRit](https://github.com/ZpiRit)
+
+*Repository:* [Tweejump](https://github.com/ZpiRit/tweejump)
+
+ 

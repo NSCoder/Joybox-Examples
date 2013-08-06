@@ -5,8 +5,7 @@ class ActionsLayer < Joybox::Core::Layer
   end
 
   def layout_characters
-    @first_character = Sprite.new file_name: 'sprites/character_horn_girl.png',
-    position: [210, 190]
+    @first_character = Sprite.new file_name: 'sprites/character_horn_girl.png', position: [210, 190]
     self << @first_character
   end 
 

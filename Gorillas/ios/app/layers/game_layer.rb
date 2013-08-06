@@ -7,19 +7,18 @@ class GameLayer < Joybox::Core::Layer
       @world.step delta: dt
     end
 
-    @player_gorilla = Sprite.new file_name: 'gorilla.png', position: [108, 147]
+    @player_gorilla = Sprite.new file_name: 'sprites/gorilla.png', position: [108, 147]
     self << @player_gorilla
 
     body = @world.new_body position: [389, 154] do
       polygon_fixture box: [16, 16], friction: 0.3, density: 1.0
     end
 
-    @enemy_gorilla = PhysicsSprite.new file_name: 'gorilla.png', body: body
+    @enemy_gorilla = PhysicsSprite.new file_name: 'sprites/gorilla.png', body: body
     self << @enemy_gorilla
 
     init_controls
   end
-
 
   def init_controls
     on_touches_began do |touches, event|
@@ -36,22 +35,18 @@ class GameLayer < Joybox::Core::Layer
     end
   end
 
-
   def new_banana_sprite
-    banana_body = @world.new_body position: @player_gorilla.position, type: KDynamicBodyType do
-
-        polygon_fixture box: [16, 16],
-                        friction: 0.3,
-                        density: 1.0
+    banana_body = @world.new_body position: @player_gorilla.position, type: Body::Dynamic do
+        polygon_fixture box: [16, 16], friction: 0.3, density: 1.0
     end 
 
-    @banana_sprite = PhysicsSprite.new file_name: 'banana.png', body: banana_body
+    banana_sprite = PhysicsSprite.new file_name: 'sprites/banana.png', body: banana_body
 
-    @world.when_collide banana_body do |collision_body, is_touching|
-      @banana_sprite.file_name = 'banana_hit.png'
-      @enemy_gorilla.file_name = 'gorilla_hit.png'
+    @world.when_collide banana_sprite do |collision_sprite, is_touching|
+      banana_sprite.file_name = 'sprites/banana_hit.png'
+      @enemy_gorilla.file_name = 'sprites/gorilla_hit.png'
     end
 
-    @banana_sprite
+    banana_sprite
   end
 end

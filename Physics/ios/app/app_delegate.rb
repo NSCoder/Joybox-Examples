@@ -4,7 +4,6 @@ class AppDelegate
 
     @director = Joybox::Configuration.setup do
       director display_stats: true
-      debug repl:true
     end
 
     @navigation_controller = UINavigationController.alloc.initWithRootViewController(@director)

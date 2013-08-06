@@ -10,8 +10,8 @@ class AppDelegate
     @window.setRootViewController(@navigation_controller)
     @window.makeKeyAndVisible
 
-    @director.push_scene(GameScene.new)
-
+    @director << GameScene.new
     true
   end
+  
 end
