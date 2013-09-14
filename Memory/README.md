@@ -56,7 +56,7 @@ If you don't already have it installed, take a couple minutes to familiarize you
 
 Next, we need a `Gemfile` with the following:
 
-    source 'https://rubygems.org
+    source 'https://rubygems.org'
 
     gem 'joybox', github: 'rubymotion/Joybox'
 
