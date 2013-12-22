@@ -137,4 +137,5 @@ REPL Support Example
 * Sprite, Sprite Batch, Sprite Frame Cache
 * Actions
 * Touches
+* Sounds
  
