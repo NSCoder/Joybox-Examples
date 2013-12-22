@@ -124,3 +124,17 @@ REPL Support Example
 *Repository:* [Tweejump](https://github.com/ZpiRit/tweejump)
 
  
+## Star Sorter (gem_sort)
+**Art by:** Ryan Jones [RyanonRails](http://ryanonrails.com)
+
+**Author:** Ryan Jones [RyanonRails](https://github.com/RyanonRails)
+
+*Repository:* [gem_sort](https://github.com/RyanonRails/gem_sort) 
+ 
+*Includes:*
+
+* Layers
+* Sprite, Sprite Batch, Sprite Frame Cache
+* Actions
+* Touches
+ 
