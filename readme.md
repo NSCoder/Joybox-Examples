@@ -54,7 +54,7 @@ Preview of some of the actions supported by Joybox
 * Scene & Sprites
 * Actions (Bezier, Blink, Fade, Jump, Move, Rotate, Scale, Skew, Tint)
 
-## Animations 
+## Animations
 **Ported From:** [How to Use Animations and Sprite Sheets in Cocos2D 2.X - Ray Wenderlich](http://www.raywenderlich.com/32045/how-to-use-animations-and-sprite-sheets-in-cocos2d-2-x)
 
 **Art By:** Vicky Wenderlick [Vicky Wenderlich](http://www.vickiwenderlich.com)
@@ -69,7 +69,7 @@ Amazing tutorial about Sprite Sheets, Sprite Batch and Animations
 * Sprite, Sprite Flip, Sprite Batch & Sprite Frame Cache
 * Touches
 * Animation & Animation Action
-* Macros 
+* Macros
 
 
 ## REPL
@@ -123,19 +123,28 @@ REPL Support Example
 
 *Repository:* [Tweejump](https://github.com/ZpiRit/tweejump)
 
- 
-## Star Sorter (gem_sort)
+
+## Star Sorter (gem_sort) iOS/OSX
 **Art by:** Ryan Jones [RyanonRails](http://ryanonrails.com)
 
 **Author:** Ryan Jones [RyanonRails](https://github.com/RyanonRails)
 
-*Repository:* [gem_sort](https://github.com/RyanonRails/gem_sort) 
- 
+*iOS Repository:* [gem_sort](https://github.com/RyanonRails/gem_sort)
+
 *Includes:*
 
 * Layers
 * Sprite, Sprite Batch, Sprite Frame Cache
 * Actions
-* Touches
+* Touches (began, moved, ended)
 * Sounds
- 
+
+*OSX Repository:* [gem_sort_osx](https://github.com/RyanonRails/gem_sort_osx)
+
+*Includes:*
+
+* Layers
+* Sprite, Sprite Batch, Sprite Frame Cache
+* Actions
+* Mouse Movement (down, dragged, up)
+* Sounds
